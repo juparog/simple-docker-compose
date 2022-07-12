@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 40px;
+            background: #556270;
+            font: 18px/27px 'Oxygen', sans-serif;
+            color:white;
+        }
+
+        button {
+            background-color: white;
+            border: 6px solid black;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }  
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo simple de docker compose</h1>
+    <button onclick="saludo()">Saludar desde la api</button>
+
+    <script>
+        function saludo() {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+            alert("¡Hola mundo!");
+        }
+    </script>
+</body>
+</html>
